@@ -2,15 +2,27 @@ package com.example.meiriq0717.gitexe;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
-
+    private Toolbar mToolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initView();
+    }
+
+    private void initView() {
+        mToolbar= (Toolbar) findViewById(R.id.toolBar);
+        mToolbar.setLogo(R.mipmap.ic_launcher);
+        mToolbar.setTitle("haha.png");
+        mToolbar.setSubtitle("hehe.jpg");
+        mToolbar.setNavigationIcon(R.mipmap.ic_launcher);
+
+        setSupportActionBar(mToolbar);
     }
 
     @Override
